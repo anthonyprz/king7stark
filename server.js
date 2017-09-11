@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 var bodyParser = require('body-parser'); //modulo para obtener la informacion de los formularios html
 var cookieParser = require('cookie-parser');
 var passport = require('passport');
@@ -59,6 +59,7 @@ var server = app.listen(process.env.PORT || 5000, function(){
   console.log("el servidor esta escuchando en", addr.address + ":" + addr.port);
 });
 
+*/
 
 
 
@@ -76,8 +77,7 @@ var server = app.listen(process.env.PORT || 5000, function(){
 
 
 
-
-/*//
+//
 // # SimpleServer
 //
 // A simple chat server using Socket.IO, Express, and Async.
@@ -161,5 +161,3 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
   console.log("Chat server listening at", addr.address + ":" + addr.port);
 });
-*/
-
