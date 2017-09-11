@@ -60,19 +60,7 @@ var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0",fu
 });
 
 
-
-
-
-
-
-
 */
-
-
-
-
-
-
 
 
 
@@ -84,6 +72,8 @@ var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0",fu
 //
 // A simple chat server using Socket.IO, Express, and Async.
 //
+
+var bodyParser = require('body-parser'); //modulo para obtener la informacion de los formularios html
 var http = require('http');
 var path = require('path');
 
