@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="css/homestyle.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src='js/jquery.min.js'></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+       <!-- <script>$( function(){$( "#draggable" ).draggable();});</script>-->
+       
+       
+    </head>
+    <body onload="getLocation2()">
+        <div class="divcerrar" id="divcerrar">
+            <a href="/logout" > <img class="imgx" src="img/X.png" width="50" height="50" align="right"></img></a>
+        </div>  
+        <div id="map" style="height:400px;">My map will go here</div>
+		<script>
+		    function getLocation2() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(myMap);
+                                            } 
+                else {alert("Error al cargar la localizacón")}
+            }
+			function myMap(position) {
+			 	var mapOptions = {
+        						  center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+        						  zoom: 18,
+                                  mapTypeId: google.maps.MapTypeId.HYBRID
+    							  }
+				var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm21zoiREk_KsuLNeJ9VGTcUJgwL4DV3E&callback=myMap"></script>
+		 <div id="draggable" class="ui-widget-content">
+             <h1>{{{nombre}}} {{{apellido}}}</h1>
+     </div>
+     
+        
+  
+        
+    </body>
+</html>
+
+
+
+
+
+
