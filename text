@@ -1,0 +1,11 @@
+anthonyprz:~/workspace (master) $ node -v
+anthonyprz:~/workspace (master) $ npm -v
+anthonyprz:~/workspace (master) $ heroku create king7stark
+anthonyprz:~/workspace (master) $ git push heroku master
+anthonyprz:~/workspace (master) $ heroku git:remote -a king7stark
+anthonyprz:~/workspace (master) $ git add .
+anthonyprz:~/workspace (master) $ git commit -am "make it better"
+anthonyprz:~/workspace (master) $ heroku git:remote -a king7stark
+anthonyprz:~/workspace (master) $ heroku ps:scale web=1
+anthonyprz:~/workspace (master) $ Git remote heroku added
+anthonyprz:~/workspace (master) $ git push heroku master

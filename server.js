@@ -80,7 +80,7 @@ var path = require('path');
 var async = require('async');
 var socketio = require('socket.io');
 var express = require('express');
-
+var bodyParser = require('body-parser'); //modulo para obtener la informacion de los formularios html
 //
 // ## SimpleServer `SimpleServer(obj)`
 //
