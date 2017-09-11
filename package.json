@@ -9,6 +9,6 @@
     "async": "~0.2.8",
     "express": "~3.2.4",
     "socket.io": "~0.9.14",
-    "bodyParser":"3.10.10"
+    "body-parser":"3.10.10"
   }
 }
