@@ -1,90 +1,86 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>epidemy</title>
-  <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Signin" data-whatever="@mdo">Sign In</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Signup" data-whatever="@fat">Sign Up</button>
+    
+    <div class="modal fade" id="Signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="/usuario/login">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">UserName:</label>
+                <input type="text" class="form-control" id="recipient-name" name="username">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Password:</label>
+                <input type="text" class="form-control" id="recipient-name" name="password">
+              </div>
+              <input type="submit" value="Submit" class="btn btn-default">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="modal fade" id="Signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="/usuario/registro">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label">UserName:</label>
+                <input type="text" class="form-control" id="recipient-name" name="username">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Password:</label>
+                <input type="text" class="form-control" id="recipient-name" name="password">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Name:</label>
+                <input type="text" class="form-control" id="recipient-name" name="nombre">
+              </div>     
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">LastName:</label>
+                <input type="text" class="form-control" id="recipient-name" name="apellido">
+              </div>  
+              <input type="submit" value="Submit" class="btn btn-default">
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
 
-</head>
-
-<body>
-   <!--
-       <form class="form-signin" method="POST" action="/usuario/login" >     
-        <h4 class="form-signin-heading">Iniciar Sesión</h4>
-        <input type="text" class="form-control" placeholder="Usuario" required autofocus id="username" name="username">
-        <input type="password" class="form-control" placeholder="Password" required  id="password" name="password" required="required">
-        <button class="btn btn-lg btn-primary btn-block" onclick='iniciarSesion();'>Ingresar</button>
-        <div class="update"></div>       
-    </form>
-    -->
-
-<div class="container">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Login</h1>
-    <form method="POST" action="/usuario/login">
-      <div class="input-container">
-        <input type="text" id="username" name="username" required="required"/>
-        <label for="username">Username</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="password" name="password" required="required"/>
-        <label for="password">Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button><span>Go</span></button>
-      </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
-    </form>
-  </div>
-  <div class="card alt">
-    <div class="toggle"></div>
-    <h1 class="title">Register
-      <div class="close"></div>
-    </h1>
-    <form method="POST" action="/usuario/registro">
-      <div class="input-container">
-        <input type="text" name="username" id="username" required="required"/>
-        <label for="username">Username</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" name="password" id="password" required="required"/>
-        <label for="password">Password</label>
-        <div class="bar"></div>
-      </div>
-   
-      <div class="input-container">
-        <input type="text" name="nombre" id="nombre" required="required"/>
-        <label for="nombre">Nombre</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="text" name="apellido" id="apellido" required="required"/>
-        <label for="apellido">Apellido</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button><span>Next</span></button>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-  <script src='js/jquery.min.js'></script>
-  <script src="js/jquery-ui.js"></script>
-    <script src="js/index.js"></script>
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
 </html>
