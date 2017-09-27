@@ -9,3 +9,5 @@ anthonyprz:~/workspace (master) $ heroku git:remote -a king7stark
 anthonyprz:~/workspace (master) $ heroku ps:scale web=1
 anthonyprz:~/workspace (master) $ Git remote heroku added
 anthonyprz:~/workspace (master) $ git push heroku master
+
+heroku login hotmail tony....@outlook.com pasword cav.....

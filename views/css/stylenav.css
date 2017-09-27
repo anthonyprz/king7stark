@@ -101,3 +101,7 @@
   height: 320px;
   border-bottom: 1px solid black;
 }
+
+#menu a a:hover a:active{
+ text-decoration: none !important; 
+}
