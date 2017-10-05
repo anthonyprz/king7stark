@@ -15,12 +15,15 @@ exports.login = function(req,res){
         }
         else{
             req.session.usuario = user.usuario
-        
-            res.redirect("/home");
-           // usuario:req.session.usuario
-             /*res.render("home",{
-                usuario:req.session.usuario
-            });*/
+            
+            if (user.usuario == "admin") {
+                console.log("entrando al administrador")
+                res.redirect("/admin");
+            } 
+            else{
+                res.redirect("/home");
+            }
+           
         }
     });
 };

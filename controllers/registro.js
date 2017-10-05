@@ -9,8 +9,6 @@ exports.registro = function(req,res){
     var nombre = req.body.nombre
     var apellido = req.body.apellido
     
-   
-    
     var registar_Usuario = new schema({
         usuario: usuario,
         password:password,
